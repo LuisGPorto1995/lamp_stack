@@ -3,10 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style/style.css">
+  <!--The link below imports the material symbols (icons) from google-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!--The title of the document-->
+  <title>Contact Form</title>
 </head>
-<body>
-  <h1>Hello World!</h1>
-  <h2>This branch is dedicated to projects related to PHP, MySQL and JavaScript projects</h2>
-</body>
+  <body>
+    <!--The main wrapper to create the shape of the form document-->
+    <div class="wrapper">
+      <!--The header of the form-->
+      <header>
+        Send Us a Message
+      </header>
+      <!--The main form-->
+      <form action="#" id="contact-form" class="contact-form">
+        <!--The field row is a row of fields-->
+        <div class="field-row">
+          <!--The field is the actual field and everything (shape, icon, the field itself etc)-->
+          <div class="field">
+            <!--Data input field-->
+            <input type="text" name="name" placeholder="Enter your name">
+            <!--The icon for the field-->
+            <span class="material-symbols-outlined">person</span>
+          </div>
+          <div class="field">
+            <!--Data input field-->
+            <input type="text" name="email" placeholder="Enter your email">
+            <!--The icon for the field-->
+            <span class="material-symbols-outlined">email</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <!--The field is the actual field and everything (shape, icon, the field itself etc)-->
+          <div class="field">
+            <!--Data input field-->
+            <input type="text" name="number" placeholder="Enter your phone number">
+            <!--The icon for the field-->
+            <span class="material-symbols-outlined">phone</span>
+          </div>
+          <div class="field">
+            <!--Data input field-->
+            <input type="text" name="website" placeholder="Enter your website">
+            <!--The icon for the field-->
+            <span class="material-symbols-outlined">globe</span>
+          </div>
+        </div>
+        <!--The container where the user will write a message-->
+        <div class="message">
+          <!--A text area is different from an input, since the message is always going to be just text-->
+          <textarea name="message" placeholder="Write your message"></textarea>
+          <!--A message icon-->
+          <span class="material-symbols-outlined">message</span>
+        </div>
+        <!--This area is just for the button the user will press when he/she wants to send the message-->
+        <div class="button-area">
+          <!--The button itself-->
+          <button type="submit">Send Message</button>
+          <!--A hidden text that only shows when the process of sending the email is happening-->
+          <span>Sending your message...</span>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="script/script.js"></script>
 </html>

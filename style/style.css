@@ -1,0 +1,281 @@
+/*
+  Importing poppins font from google
+*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600&display=swap');
+
+/*
+  Configuring the html document as a whole
+  -It basically sets the box-sizing to border-box and the main font family is poppins
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*
+  The style of the document's body:
+  -The flex display places the wrapper in the middle with the "align-items" and "justify-content" both in "center"
+  -It has a minimum height of 100vh and a horizontal padding of 10px
+  -Also it has a blue background
+*/
+body {
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #0D6EFD;
+}
+
+/*
+  The style for the main contact form wrapper
+  -It has a preferable width of 720px, a white background and a border
+*/
+.wrapper {
+  width: 720px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/*
+  The style of the header of the contact form
+  -It has a font size of 22, an almost bold font weight, vertical and horizontal padding and a bottom border to simulate a horizontal line
+*/
+.wrapper header {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+/*
+  The style for the main form area
+  -It has a horizontal and vertical padding
+*/
+.wrapper form {
+  margin: 35px 30px;
+}
+
+/*
+  The style of the row of fields
+  -It has a flex display (to align the fields)
+  -It aligns the itens in the center, with space between them
+  -It has bottom margin
+*/
+form .field-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+/*
+  The style for the field inside the field row
+  -It has a relative positioning to place the icon accordingly
+  -It has a fixed height and a dynamic width
+*/
+.field-row .field {
+  position: relative;
+  height: 50px;
+  width: calc(100% / 2 - 13px);
+}
+
+/*
+  The style for the icon in the form inputs
+  -It has an absolute positioning, with a padding to proper adjustment of its placement
+*/
+form .field-row .field span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px 15px;
+}
+
+/*
+  The style for the input and text area:
+  -They have maximum width and height, no outline and horizontal padding, with a font size of 16 and a solid border of 5px
+*/
+form .field input,
+form .message textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0 48px;
+    font-size: 16px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/*
+  The style of the placeholder text:
+  -It has a gray color
+*/
+form .field input::placeholder,
+form .message textarea::placeholder {
+    color: #bfbfbf;
+}
+
+/*
+  The style of the field and message when focused:
+  -The border gets a blue color
+*/
+form .field input:focus,
+form .message textarea:focus {
+    border: 2px solid #0D6EFD;
+}
+
+/*
+  The style of the icons when focused:
+  -The icons gets a blue color
+*/
+form .field input:focus ~ span,
+form .message textarea:focus ~ span {
+  color: #0D6EFD
+}
+
+/*
+  the style of the message div:
+  -It has a relative position for better positioning of the icon
+*/
+form .message {
+  position: relative;
+}
+
+/*
+  The style for the icon in the message text area
+  -It has the same style as the form inputs, but with a different padding
+*/
+form .message span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 17px 15px;
+}
+
+/*
+  The style of the text area of the message:
+  -It defines the minimal and maximal height and width, with some paddings
+*/
+form .message textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 120px;
+  max-height: 300px;
+  min-height: 120px;
+  padding: 15px 20px 0 48px;
+}
+
+/*
+  The style of the div where the button and span text are placed
+  -It has a flex display, with its itens align in the center with some margins
+*/
+form .button-area {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+
+/*
+  the style of the button:
+  -It has font size of 18px, with white text color and blue background color, with some padding and a border radius of 5px
+*/
+.button-area button {
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: #0D6EFD;
+  padding: 13px 25px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/*
+  the style of the button when hovered:
+  -It gets a black background
+*/
+.button-area button:hover {
+  background: #000;
+}
+
+/*
+  the style of the button when hovered:
+  -It gets a gray background
+*/
+.button-area button:active {
+  background: #7e7e7e;
+}
+
+/*
+  the style of the span text:
+  -It is hidden, but it has a blue text with some margin on its left
+*/
+.button-area span {
+  display: none;
+  color: #0D6EFD;
+  margin-left: 30px;
+}
+
+/*
+  This is the style for the icons:
+  FILL: from 0 to 1
+  wght: from 100 to 700
+  GRAD: from -50 to 200
+  opsz: from 20 to 48
+*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/*
+  Style changes when the window gets resized
+*/
+@media(max-width: 600px) {
+  .wrapper header {
+      text-align: center;
+  }
+
+  form .field-row {
+      margin-bottom: 0px;
+      flex-direction: column;
+  }
+
+  .field-row .field {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  form .message textarea {
+      resize: none;
+  }
+
+  form .button-area {
+      flex-direction: column;
+  }
+
+  .button-area button {
+      width: 100%;
+  }
+
+  .button-area span {
+      text-align: center;
+      margin-right: 20px 0;
+  }
+}
