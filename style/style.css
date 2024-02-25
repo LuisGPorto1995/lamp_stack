@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/*
+  Define variables for the root document
+*/
+
+:root {
+  /*
+   COLORS
+  */
+
+  /* backgroud colors */
+  --bg-white: rgb(255, 255, 255);
+  --bg-black-alpha-20: rgba(0, 0, 0, 0.2);
+  --bg-lavender-blush: rgb(255, 245, 245);
+  --bg-majorelle-blue: rgb(98, 71, 250);
+  --bg-ocean-blue: rgb(86, 64, 212);
+  --bg-majorelle-blue-alpha-5: rgba(98, 71, 250, 0.05);
+  --bg-misty-rose: rgb(255, 229, 229);
+  --bg-red-salsa: rgb(249, 72, 81);
+  --bg-red-salsa-alpha-5: rgba(249, 72, 81, 0.05);
+  --bg-english-vermillion: rgb(212, 58, 66);
+  --bg-chrome-yellow-alpha-5: rgba(255, 170, 0, 0.05);
+  --bg-sunglow-alpha-10: rgba(255, 204, 0, 0.1);
+  --bg-gainsboro: rgb(217, 217, 217);
+
+  /* text color */
+  --text-white: rgb(255, 255, 255);
+  --text-gunmetal: rgb(21, 36, 50);
+  --text-light-coral: rgb(252, 120, 127);
+  --text-granite-gray: rgb(93, 97, 101);
+  --text-majorelle-blue: rgb(98, 71, 250);
+  --text-sunglow: rgb(255, 204, 0);
+
+  /* border color */
+  --border-gainsboro: rgb(217, 216, 216);
+
+  /*
+   TYPOGRAPHY
+  */
+
+  /* font family */
+  --ff-poppins: 'Poppins', sans-serif;
+
+  /* font size */
+  --fontSize-1: 4.2rem;
+  --fontSize-2: 3.6rem;
+  --fontSize-3: 2.5rem;
+  --fontSize-4: 2.4rem;
+  --fontSize-5: 2rem;
+  --fontSize-6: 1.6rem;
+  --fontSize-7: 1.5rem;
+
+  /* font weight */
+  --weight-bold: 700;
+  --weight-semiBold: 600;
+  --weight-medium: 500;
+
+  /*
+  SPACING
+  */
+
+  --section-spacing: 80px;
+
+  /*
+  BOX SHADOW
+  */
+
+  --shadow-1: 0 2px 10px rgba(21, 36, 50, 0.1);
+  --shadow-2: 0 5px 10px rgba(98, 71, 250, 0.25);
+  --shadow-3: 0 5px 10px rgba(212, 58, 66, 0.25);
+  --shadow-4: 0 30px 50px rgba(212, 58, 66, 0.3);
+
+  /*
+  RADIUS
+  */
+
+  --radius-pill: 200px;
+  --radius-circle: 50%;
+  --radius-30: 30px;
+  --radius-20: 20px;
+}
+
+/*
+  Define default style for default and custom elements
+*/
+* {
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 150vh;
+  background: url("/images/hero-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(27, 0, 126);
+  font-weight: 500;
+}
+
+.material-symbols-outlined {
+  font-size: 28px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  background-color: blue;
+  color: white;
+  width: 80px;
+  font-weight: 500;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: rgb(78, 78, 255);
+  box-shadow: 0px 3px 10px rgba(128, 128, 128, 0.7);
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  color: black;
+  width: 80px;
+  border: 2px solid transparent;
+  font-weight: 500;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  border: 2px solid rgb(155, 155, 155);
+  box-shadow: 0px 0px 10px rgb(204, 204, 204);
+}
+
+/*
+  Preloader style
+*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-lavender-blush);
+  display: grid;
+  place-content: center;
+  z-index: 6;
+  transition: var(--transition-1);
+  -webkit-transition: var(--transition-1);
+  -moz-transition: var(--transition-1);
+  -ms-transition: var(--transition-1);
+  -o-transition: var(--transition-1);
+}
+
+.preloader.remove {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.preloader .img {
+  animation: bounce 800ms ease-in-out infinite alternate;
+  -webkit-animation: bounce 800ms ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.preloader-inner {
+  position: relative;
+}
+
+.preloader-inner::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80%;
+  height: 10px;
+  background-color: var(--bg-black-alpha-20);
+  filter: blur(4px);
+  z-index: -1;
+  animation: dropShadow 800ms ease-in-out infinite alternate;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -webkit-filter: blur(4px);
+  -webkit-animation: dropShadow 800ms ease-in-out infinite alternate;
+}
+
+@keyframes dropShadow {
+  0% {
+    width: 40%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
