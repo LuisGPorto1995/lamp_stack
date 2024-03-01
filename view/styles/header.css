@@ -6,7 +6,7 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   height: fit-content;
   animation: slideIn 0.5s ease-in-out forwards;
   -webkit-animation: slideIn 0.5s ease-in-out forwards;
@@ -30,7 +30,7 @@
 }
 
 .header.active {
-  background-color: var(--bg-white);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 2px 6px var(--bg-black-alpha-20);
 }
 
@@ -84,10 +84,12 @@
 .header .navbar-link {
   position: relative;
   font-size: medium;
+  color: var(--text-white);
 }
 
 .header.active .navbar-link {
   font-size: small;
+  color: var(--text-gunmetal)
 }
 
 .header .navbar-link::after {
@@ -130,7 +132,7 @@
   max-width: 45%;
   width: 100%;
   gap: 20px;
-  border-left: 2px solid var(--bg-black-alpha-20);
+  border-left: 2px solid var(--border-gainsboro);
   border-radius: 1px;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -152,10 +154,15 @@
 
 .header .header-action a {
   font-size: medium;
+  color: var(--bg-white);
 }
 
 .header.active .header-action a {
   font-size: small;
+}
+
+.header.active .header-action .login-btn {
+  color: var(--text-gunmetal);
 }
 
 .header .nav-toggle-btn {
@@ -180,26 +187,26 @@
     position: fixed;
     top: 15px;
     right: 50px;
-    transition: transform 0.1s ease-in-out;
-    -webkit-transition: transform 0.1s ease-in-out;
-    -moz-transition: transform 0.1s ease-in-out;
-    -ms-transition: transform 0.1s ease-in-out;
-    -o-transition: transform 0.1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
     z-index: 1;
-  }
+}
 
   .header .close {
     display: block;
     position: fixed;
     top: 15px;
     right: 50px;
+    z-index: 1;
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-    z-index: 1;
-  }
+}
 
   .header .slide-menu {
     position: fixed;
@@ -218,6 +225,14 @@
   .header .slide-menu.active {
     right: 0px;
     z-index: 1;
+  }
+
+  .header .slide-menu.active .navbar-list a {
+    color: var(--text-gunmetal);
+  }
+
+  .header .slide-menu.active .header-action .login-btn {
+    color: var(--text-gunmetal);
   }
 
   .header .logo {

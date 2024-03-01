@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
   Define variables for the root document
@@ -16,10 +16,11 @@
   --bg-lavender-blush: rgb(255, 245, 245);
   --bg-majorelle-blue: rgb(98, 71, 250);
   --bg-ocean-blue: rgb(86, 64, 212);
+  --bg-banner-blue: rgb(30, 20, 75);
   --bg-majorelle-blue-alpha-5: rgba(98, 71, 250, 0.05);
   --bg-misty-rose: rgb(255, 229, 229);
   --bg-red-salsa: rgb(249, 72, 81);
-  --bg-red-salsa-alpha-5: rgba(249, 72, 81, 0.05);
+  --bg-red-salsa-alpha-5: rgba(2, 0, 0, 0.05);
   --bg-english-vermillion: rgb(212, 58, 66);
   --bg-chrome-yellow-alpha-5: rgba(255, 170, 0, 0.05);
   --bg-sunglow-alpha-10: rgba(255, 204, 0, 0.1);
@@ -86,6 +87,8 @@
   Define default style for default and custom elements
 */
 * {
+  margin: 0px;
+  padding: 0px;
   transition: 0.3s ease-in-out;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -96,9 +99,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 150vh;
-  background: url("/images/hero-banner.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 ul {
@@ -112,8 +112,21 @@ li {
 
 a {
   text-decoration: none;
-  color: rgb(27, 0, 126);
+  color: var(--text-gunmetal);
   font-weight: 500;
+}
+
+.montserrat-header {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.spinnaker-regular {
+  font-family: "Spinnaker", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .material-symbols-outlined {
@@ -132,8 +145,10 @@ a {
   padding: 10px 25px;
   background-color: blue;
   color: white;
-  width: 80px;
+  min-width: 80px;
+  max-width: 150px;
   font-weight: 500;
+  cursor: pointer;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -157,8 +172,10 @@ a {
   justify-content: center;
   padding: 10px 25px;
   color: black;
-  width: 80px;
+  min-width: 80px;
+  max-width: 150px;
   border: 2px solid transparent;
+  cursor: pointer;
   font-weight: 500;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -175,6 +192,7 @@ a {
 .btn-secondary:hover {
   border: 2px solid rgb(155, 155, 155);
   box-shadow: 0px 0px 10px rgb(204, 204, 204);
+  background-color: var(--bg-white);
 }
 
 /*
